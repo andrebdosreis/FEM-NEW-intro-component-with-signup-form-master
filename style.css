@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --pri-red: hsl(0, 100%, 74%);
+    --pri-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neu-dark-blue: hsl(249, 10%, 26%); 
+    --grayish-blue: hsl(246, 25%, 77%);
+    --shadow-red: hsl(0, 60%, 60%, 0.7);
+    --shadow-green: hsl(154, 100%, 28%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: var(--pri-red);
+}
+
+.attribution { font-size: 11px; text-align: center; position: fixed; bottom: 5px; width: 100%; color: var(--accent-blue);}
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; font-weight: 600;}
+
+main {
+    height: 100vh;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+    .container {
+        margin: auto;
+        width: 100%;
+        max-width: 1440px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+        .area--copy {
+            flex: 1;
+            color: #fff;
+            padding-right: 70px;
+        }
+
+            .area--copy h1 {
+                font-size: 48px;
+                padding-bottom: 30px;
+            }
+
+            .area--copy p {
+                line-height: 32px;
+            }
+        
+        .area--buttons {
+            flex: 1;
+        }
+
+            .area--buttons .btn-trial {
+                background-color: var(--accent-blue);
+                padding: 10px 70px;
+                line-height:24px;
+                border: none;
+                height: 60px;
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 0px 8px 0px var(--shadow-red);
+                cursor: pointer;
+                color: #fff;
+                margin-bottom: 25px;
+            }
+            
+            .area--buttons .area--form {
+                background-color: #fff;
+                border-radius: 10px;
+                width: 100%;
+                box-shadow: 0 8px 0px var(--shadow-red);
+                display: flex;
+                flex-direction: column;
+                padding: 40px 40px;
+            }
+
+                .area--form label {
+                    padding: 10px 0px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                }
+
+                    .area--form label input {
+                        height: 55px;
+                        border-radius: 10px;
+                        border: 1px solid var(--grayish-blue);
+                        padding-left: 30px;
+                        font-weight: 700;
+                        outline: none;
+                        color: var(--neu-dark-blue);
+                    }
+
+                        .area--form label input::placeholder {
+                            font-weight: 700;
+                        }
+
+                        .area--form .icon-error {
+                            position: absolute;
+                            top: 25px;
+                            right: 40px;
+                            width: 25px;
+                            height: auto;
+                            display: none;
+                        }
+
+                        .area--form em {
+                            width: 100%;
+                            text-align: right;
+                            color: var(--pri-red);
+                            font-weight: 600;
+                            font-size: 10px;
+                        }
+
+                        .border-error {
+                            border: 2px solid var(--pri-red) !important;
+                        }
+                
+                .area--form .btn-form {
+                    width: 100%;
+                    background-color: var(--pri-green);
+                    height: 55px;
+                    border-radius: 10px;
+                    color: #fff;
+                    border: none;
+                    border-bottom: 3px solid var(--shadow-green);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin: 10px 0px;
+                    cursor: pointer;
+                }
+
+                .area--form p {
+                    color: var(--grayish-blue);
+                    font-weight: 600;
+                    font-size: 13px;
+                    text-align: center;
+                }
+
+                    .area--form p a {
+                        color: var(--pri-red);
+                        text-decoration: none;
+                    }
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        background-image: url(images/bg-intro-mobile.png);
+    }
+    .wrapper {margin-top: 100px;}
+
+    .container {
+        flex-direction: column;
+    }
+
+        .area--copy {
+            padding-right: 0px;
+            margin-bottom: 70px;
+        }
+
+        .area--copy h1 {
+            font-size: 36px;
+        }
+        .area--copy h1, 
+        .area--copy p {
+            text-align: center;
+        }
+
+        .area--buttons {
+            width: 100%;
+        }
+
+        .area--buttons .btn-trial {
+            height: 80px;
+        }
+
+        .area--buttons .area--form {
+            padding: 20px 20px;
+            margin-bottom: 90px;
+        }
+
+        .area--form p {
+            font-size: 10px;
+        }
+
+        .attribution { display: none;}
+}
